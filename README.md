@@ -1,2 +1,8 @@
-# KL_JR_ProgW
-Repozytorium stworzone w celu realizacji zadań w ramach przedmiotu Programowanie Współbieżne (4 semestr, 2025r.)
+# Concurrent programming
+
+## Working Group
+
+| Name Surname (initials) | GUID                                     |
+| ----------------------- | ---------------------------------------- |
+| Klaudia Łuczak          | `{B39F6F89-D279-4507-8D0E-8A111635A115}` |
+| Julia Rzeźniczak        | `` |
