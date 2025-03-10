@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = TP.Threading
+build_property.ProjectDir = C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\Threading\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

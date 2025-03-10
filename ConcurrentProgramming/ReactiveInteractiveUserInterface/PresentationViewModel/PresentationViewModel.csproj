@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>TP.ConcurrentProgramming.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName>TP.ConcurrentProgramming.$(MSBuildProjectName)</AssemblyName>
+    <VersionPrefix>4.2.0</VersionPrefix>
+    <Copyright>Copyright 2022 Mariusz Postol</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PresentationModel\PresentationModel.csproj" />
+  </ItemGroup>
+
+</Project>

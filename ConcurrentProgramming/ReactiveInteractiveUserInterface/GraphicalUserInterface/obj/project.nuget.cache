@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nBiOaThlcAQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\GraphicalUserInterface\\PresentationView.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\klucz\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
