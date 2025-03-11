@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Nafd2JnY/RA=",
+  "dgSpecHash": "yOtDxTywWOY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\GraphicalUserInterface\\PresentationView.csproj",
+  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\GraphicalUserInterface\\PresentationView.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\klucz\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\klucz\\.nuget\\packages\\system.reactive\\6.0.1\\system.reactive.6.0.1.nupkg.sha512"
+    "C:\\Users\\globa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\system.reactive\\6.0.1\\system.reactive.6.0.1.nupkg.sha512"
   ],
   "logs": []
 }
