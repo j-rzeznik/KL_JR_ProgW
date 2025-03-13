@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k32OOlzm7pY=",
+  "dgSpecHash": "0xhq9n749e0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\CommunicationTest\\CommunicationTest.csproj",
+  "projectFilePath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\CommunicationTest\\CommunicationTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",

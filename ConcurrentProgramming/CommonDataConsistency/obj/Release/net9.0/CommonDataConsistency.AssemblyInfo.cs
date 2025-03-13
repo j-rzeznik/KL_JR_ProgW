@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP.ConcurrentProgramming.CommonDataConsistency")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af5b9a293f9f5f35b8c5fef58eb1d9c1666247c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a8e3180ee195a2b3ebf6e64937484baaed30c4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP.ConcurrentProgramming.CommonDataConsistency")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP.ConcurrentProgramming.CommonDataConsistency")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

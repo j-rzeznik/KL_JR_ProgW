@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "42p7VrU5YSY=",
+  "dgSpecHash": "IwkZg7pXXsA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\CommonDataConsistencyUnitTest\\CommonDataConsistencyUnitTest.csproj",
+  "projectFilePath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\CommonDataConsistencyUnitTest\\CommonDataConsistencyUnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",

@@ -1,0 +1,13 @@
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\bin\Debug\net8.0\TP.ConcurrentProgramming.Fundamentals.deps.json
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\bin\Debug\net8.0\TP.ConcurrentProgramming.Fundamentals.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\bin\Debug\net8.0\TP.ConcurrentProgramming.Fundamentals.pdb
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\Fundamentals.csproj.AssemblyReference.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\Fundamentals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\Fundamentals.AssemblyInfoInputs.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\Fundamentals.AssemblyInfo.cs
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\Fundamentals.csproj.CoreCompileInputs.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\Fundamentals.sourcelink.json
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\TP.ConcurrentProgramming.Fundamentals.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\refint\TP.ConcurrentProgramming.Fundamentals.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\TP.ConcurrentProgramming.Fundamentals.pdb
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\Fundamentals\obj\Debug\net8.0\ref\TP.ConcurrentProgramming.Fundamentals.dll

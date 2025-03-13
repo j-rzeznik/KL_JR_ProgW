@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uLBByV3geq8=",
+  "dgSpecHash": "+Md5ruxgfeQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\SynchronizationTest\\SynchronizationTest.csproj",
+  "projectFilePath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\SynchronizationTest\\SynchronizationTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",

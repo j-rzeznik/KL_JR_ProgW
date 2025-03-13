@@ -1799,9 +1799,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModelTest\\PresentationModelTest.csproj",
+      "projectUniqueName": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModelTest\\PresentationModelTest.csproj",
       "projectName": "PresentationModelTest",
-      "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModelTest\\PresentationModelTest.csproj",
+      "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModelTest\\PresentationModelTest.csproj",
       "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModelTest\\obj\\",
       "projectStyle": "PackageReference",
@@ -1825,8 +1825,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj": {
-              "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj"
+            "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj": {
+              "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj"
             }
           }
         }

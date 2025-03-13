@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {}
+    "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {}
   },
   "projects": {
-    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {
+    "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
         "projectName": "TP.ConcurrentProgramming.RealTimeProgramming",
-        "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
+        "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\obj\\",
         "projectStyle": "PackageReference",

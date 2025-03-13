@@ -1,0 +1,13 @@
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\bin\Debug\net9.0\TP.ConcurrentProgramming.CommonDataConsistency.deps.json
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\bin\Debug\net9.0\TP.ConcurrentProgramming.CommonDataConsistency.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\bin\Debug\net9.0\TP.ConcurrentProgramming.CommonDataConsistency.pdb
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\CommonDataConsistency.csproj.AssemblyReference.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\CommonDataConsistency.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\CommonDataConsistency.AssemblyInfoInputs.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\CommonDataConsistency.AssemblyInfo.cs
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\CommonDataConsistency.csproj.CoreCompileInputs.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\CommonDataConsistency.sourcelink.json
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\TP.ConcurrentProgramming.CommonDataConsistency.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\refint\TP.ConcurrentProgramming.CommonDataConsistency.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\TP.ConcurrentProgramming.CommonDataConsistency.pdb
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\CommonDataConsistency\obj\Debug\net9.0\ref\TP.ConcurrentProgramming.CommonDataConsistency.dll

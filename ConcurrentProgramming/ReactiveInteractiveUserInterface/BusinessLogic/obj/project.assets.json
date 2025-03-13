@@ -80,9 +80,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "TP.ConcurrentProgramming.BusinessLogic",
-      "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
@@ -106,8 +106,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj"
+            "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj"
             }
           }
         }

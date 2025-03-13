@@ -1,0 +1,13 @@
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\bin\Debug\net8.0\DataLayer.deps.json
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\bin\Debug\net8.0\DataLayer.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\bin\Debug\net8.0\DataLayer.pdb
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.sourcelink.json
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\DataLayer.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\refint\DataLayer.dll
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\DataLayer.pdb
+C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\ref\DataLayer.dll

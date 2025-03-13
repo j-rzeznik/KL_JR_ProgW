@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DJQpzOQAbpw=",
+  "dgSpecHash": "jHV2nPy/b7M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
+  "projectFilePath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

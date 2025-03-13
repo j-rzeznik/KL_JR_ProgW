@@ -2006,9 +2006,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\FundamentalsTest.csproj",
+      "projectUniqueName": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\FundamentalsTest.csproj",
       "projectName": "TP.ConcurrentProgramming.FundamentalsTest",
-      "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\FundamentalsTest.csproj",
+      "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\FundamentalsTest.csproj",
       "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\obj\\",
       "projectStyle": "PackageReference",
@@ -2032,8 +2032,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Fundamentals\\Fundamentals.csproj": {
-              "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Fundamentals\\Fundamentals.csproj"
+            "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Fundamentals\\Fundamentals.csproj": {
+              "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Fundamentals\\Fundamentals.csproj"
             }
           }
         }
