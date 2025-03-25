@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "je8SC6TKFlY=",
+  "dgSpecHash": "zQP0guAeWrQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj",
+  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

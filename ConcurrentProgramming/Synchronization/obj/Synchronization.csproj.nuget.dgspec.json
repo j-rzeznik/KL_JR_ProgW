@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj": {}
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj": {}
   },
   "projects": {
-    "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj": {
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj",
         "projectName": "TP.ConcurrentProgramming.Synchronization",
-        "projectPath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj",
+        "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\Synchronization.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\Synchronization\\obj\\",
         "projectStyle": "PackageReference",

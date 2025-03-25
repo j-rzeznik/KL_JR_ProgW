@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ozpJubmJXAI=",
+  "dgSpecHash": "461UnxbQQtg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\source\\repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\FundamentalsTest.csproj",
+  "projectFilePath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\FundamentalsTest\\FundamentalsTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\coverlet.collector\\6.0.3\\coverlet.collector.6.0.3.nupkg.sha512",
