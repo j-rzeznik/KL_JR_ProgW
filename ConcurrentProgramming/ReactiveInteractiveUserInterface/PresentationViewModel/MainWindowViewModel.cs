@@ -9,6 +9,7 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using TP.ConcurrentProgramming.Presentation.Model;
 using TP.ConcurrentProgramming.Presentation.ViewModel.MVVMLight;
 using ModelIBall = TP.ConcurrentProgramming.Presentation.Model.IBall;
@@ -26,27 +27,40 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
     {
       ModelLayer = modelLayerAPI == null ? ModelAbstractApi.CreateModel() : modelLayerAPI;
       Observer = ModelLayer.Subscribe<ModelIBall>(x => Balls.Add(x));
-    }
+      StartCommand = new RelayCommand(Start);
+        }
 
-    #endregion ctor
+        #endregion ctor
 
-    #region public API
+        #region public API
 
-    public void Start(int numberOfBalls)
-    {
-      if (Disposed)
-        throw new ObjectDisposedException(nameof(MainWindowViewModel));
-      ModelLayer.Start(numberOfBalls);
-      Observer.Dispose();
-    }
+        public int BallCount
+        {
+            get => ballCount;
+            set => Set(ref ballCount, value);
+        }
 
-    public ObservableCollection<ModelIBall> Balls { get; } = new ObservableCollection<ModelIBall>();
+        public ICommand StartCommand { get; }
 
-    #endregion public API
+        public ObservableCollection<ModelIBall> Balls { get; } = new ObservableCollection<ModelIBall>();
 
-    #region IDisposable
+        private void Start()
+        {
+            if (Disposed)
+                throw new ObjectDisposedException(nameof(MainWindowViewModel));
 
-    protected virtual void Dispose(bool disposing)
+            if (BallCount > 0)
+            {
+                ModelLayer.Start(BallCount);
+                Observer.Dispose(); // opcjonalnie, tylko jeśli trzeba zakończyć stary observer
+            }
+        }
+
+        #endregion public API
+
+        #region IDisposable
+
+        protected virtual void Dispose(bool disposing)
     {
       if (!Disposed)
       {
@@ -78,7 +92,8 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
     private IDisposable Observer = null;
     private ModelAbstractApi ModelLayer;
     private bool Disposed = false;
+    private int ballCount;
 
-    #endregion private
-  }
+        #endregion private
+    }
 }

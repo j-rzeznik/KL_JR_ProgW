@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP.ConcurrentProgramming.Communication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d85b88bccec83c5deb4fda315fbc9df8a5c27761")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+310e4165c6c0abb3397368a1e130d91b279ce1c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP.ConcurrentProgramming.Communication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP.ConcurrentProgramming.Communication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

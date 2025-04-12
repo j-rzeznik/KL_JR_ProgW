@@ -11,3 +11,16 @@ C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteracti
 C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\refint\DataLayer.dll
 C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\DataLayer.pdb
 C:\Users\globa\source\repos\KL_JR_ProgW1\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\ref\DataLayer.dll
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\bin\Debug\net8.0\DataLayer.deps.json
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\bin\Debug\net8.0\DataLayer.dll
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\bin\Debug\net8.0\DataLayer.pdb
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\Data.sourcelink.json
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\DataLayer.dll
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\refint\DataLayer.dll
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\DataLayer.pdb
+C:\Users\klucz\source\repos\KL_JR_ProgW\ConcurrentProgramming\ReactiveInteractiveUserInterface\Data\obj\Debug\net8.0\ref\DataLayer.dll

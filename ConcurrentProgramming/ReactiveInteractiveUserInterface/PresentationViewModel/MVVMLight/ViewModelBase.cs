@@ -33,6 +33,19 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel.MVVMLight
       PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
+    /// <summary>
+    /// Sets the field and raises PropertyChanged if the value changes.
+    /// </summary>
+    protected bool Set<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+    {
+        if (Equals(field, value))
+            return false;
+
+        field = value;
+        RaisePropertyChanged(propertyName);
+        return true;
+    }
+
     #endregion API
-  }
+    }
 }
