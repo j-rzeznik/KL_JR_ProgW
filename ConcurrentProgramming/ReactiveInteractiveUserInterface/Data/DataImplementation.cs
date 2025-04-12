@@ -82,7 +82,7 @@ namespace TP.ConcurrentProgramming.Data
     private void Move(object? x)
     {
       foreach (Ball item in BallsList)
-        item.Move(new Vector((RandomGenerator.NextDouble() - 0.5) * 10, (RandomGenerator.NextDouble() - 0.5) * 10));
+        item.Move(new Vector((RandomGenerator.NextDouble() - 0.5), (RandomGenerator.NextDouble() - 0.5)));
     }
 
     #endregion private

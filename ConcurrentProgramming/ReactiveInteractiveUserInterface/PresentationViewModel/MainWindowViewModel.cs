@@ -27,7 +27,7 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
     {
       ModelLayer = modelLayerAPI == null ? ModelAbstractApi.CreateModel() : modelLayerAPI;
       Observer = ModelLayer.Subscribe<ModelIBall>(x => Balls.Add(x));
-      StartCommand = new RelayCommand(Start);
+      StartCommand = new RelayCommand(Start);               //wywołuje metodę Start
         }
 
         #endregion ctor
@@ -61,39 +61,39 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
         #region IDisposable
 
         protected virtual void Dispose(bool disposing)
-    {
-      if (!Disposed)
-      {
-        if (disposing)
         {
-          Balls.Clear();
-          Observer.Dispose();
-          ModelLayer.Dispose();
+          if (!Disposed)
+          {
+            if (disposing)
+            {
+              Balls.Clear();
+              Observer.Dispose();
+              ModelLayer.Dispose();
+            }
+
+            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+            // TODO: set large fields to null
+            Disposed = true;
+          }
         }
 
-        // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-        // TODO: set large fields to null
-        Disposed = true;
-      }
-    }
+        public void Dispose()
+        {
+          if (Disposed)
+            throw new ObjectDisposedException(nameof(MainWindowViewModel));
+          Dispose(disposing: true);
+          GC.SuppressFinalize(this);
+        }
 
-    public void Dispose()
-    {
-      if (Disposed)
-        throw new ObjectDisposedException(nameof(MainWindowViewModel));
-      Dispose(disposing: true);
-      GC.SuppressFinalize(this);
-    }
+        #endregion IDisposable
 
-    #endregion IDisposable
+        #region private
 
-    #region private
+        private IDisposable Observer = null;
+        private ModelAbstractApi ModelLayer;
+        private bool Disposed = false;
+        private int ballCount;
 
-    private IDisposable Observer = null;
-    private ModelAbstractApi ModelLayer;
-    private bool Disposed = false;
-    private int ballCount;
-
-        #endregion private
-    }
+            #endregion private
+        }
 }
