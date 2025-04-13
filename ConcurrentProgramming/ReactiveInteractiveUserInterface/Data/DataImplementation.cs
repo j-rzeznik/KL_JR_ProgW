@@ -36,8 +36,11 @@ namespace TP.ConcurrentProgramming.Data
       for (int i = 0; i < numberOfBalls; i++)
       {
         Vector startingPosition = new(random.Next(100, 400 - 100), random.Next(100, 400 - 100));
-        Ball newBall = new(startingPosition, startingPosition);
-        upperLayerHandler(startingPosition, newBall);
+        double angle = random.NextDouble() * 2 * Math.PI;
+        double speed = 5.0; // stała prędkość dla wszystkich
+
+        Ball newBall = new(startingPosition, speed, angle);
+                upperLayerHandler(startingPosition, newBall);
         BallsList.Add(newBall);
       }
     }
@@ -82,7 +85,7 @@ namespace TP.ConcurrentProgramming.Data
     private void Move(object? x)
     {
       foreach (Ball item in BallsList)
-        item.Move(new Vector((RandomGenerator.NextDouble() - 0.5), (RandomGenerator.NextDouble() - 0.5)));
+        item.Move();
     }
 
     #endregion private

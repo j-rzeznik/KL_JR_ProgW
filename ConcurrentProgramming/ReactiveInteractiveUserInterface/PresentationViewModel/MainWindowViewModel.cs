@@ -30,70 +30,70 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
       StartCommand = new RelayCommand(Start);               //wywołuje metodę Start
         }
 
-        #endregion ctor
+    #endregion ctor
 
-        #region public API
+    #region public API
 
-        public int BallCount
-        {
-            get => ballCount;
-            set => Set(ref ballCount, value);
-        }
+    public int BallCount
+    {
+        get => ballCount;
+        set => Set(ref ballCount, value);
+    }
 
-        public ICommand StartCommand { get; }
+    public ICommand StartCommand { get; }
 
-        public ObservableCollection<ModelIBall> Balls { get; } = new ObservableCollection<ModelIBall>();
+    public ObservableCollection<ModelIBall> Balls { get; } = new ObservableCollection<ModelIBall>();
 
-        private void Start()
-        {
-            if (Disposed)
-                throw new ObjectDisposedException(nameof(MainWindowViewModel));
-
-            if (BallCount > 0)
-            {
-                ModelLayer.Start(BallCount);
-                Observer.Dispose(); // opcjonalnie, tylko jeśli trzeba zakończyć stary observer
-            }
-        }
-
-        #endregion public API
-
-        #region IDisposable
-
-        protected virtual void Dispose(bool disposing)
-        {
-          if (!Disposed)
-          {
-            if (disposing)
-            {
-              Balls.Clear();
-              Observer.Dispose();
-              ModelLayer.Dispose();
-            }
-
-            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-            // TODO: set large fields to null
-            Disposed = true;
-          }
-        }
-
-        public void Dispose()
-        {
-          if (Disposed)
+    private void Start()
+    {
+        if (Disposed)
             throw new ObjectDisposedException(nameof(MainWindowViewModel));
-          Dispose(disposing: true);
-          GC.SuppressFinalize(this);
+
+        if (BallCount > 0)
+        {
+            ModelLayer.Start(BallCount);
+            Observer.Dispose(); // opcjonalnie, tylko jeśli trzeba zakończyć stary observer
+        }
+    }
+
+    #endregion public API
+
+    #region IDisposable
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!Disposed)
+        {
+        if (disposing)
+        {
+            Balls.Clear();
+            Observer.Dispose();
+            ModelLayer.Dispose();
         }
 
-        #endregion IDisposable
-
-        #region private
-
-        private IDisposable Observer = null;
-        private ModelAbstractApi ModelLayer;
-        private bool Disposed = false;
-        private int ballCount;
-
-            #endregion private
+        // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+        // TODO: set large fields to null
+        Disposed = true;
         }
+    }
+
+    public void Dispose()
+    {
+        if (Disposed)
+        throw new ObjectDisposedException(nameof(MainWindowViewModel));
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
+
+    #endregion IDisposable
+
+    #region private
+
+    private IDisposable Observer = null;
+    private ModelAbstractApi ModelLayer;
+    private bool Disposed = false;
+    private int ballCount;
+
+        #endregion private
+    }
 }
