@@ -14,11 +14,10 @@ namespace TP.ConcurrentProgramming.Data
     {
         #region ctor
 
-        internal Ball(Vector initialPosition, double initialSpeed, double initialAngle)
+        internal Ball(Vector initialPosition, Vector initialVelocity)
         {
             Position = initialPosition;
-            Speed = initialSpeed;
-            Angle = initialAngle;
+            Velocity = initialVelocity;
         }
 
         #endregion ctor
@@ -34,38 +33,25 @@ namespace TP.ConcurrentProgramming.Data
         #region private
 
         private Vector Position;
-        private double Speed;
-        private double Angle;       //kąt w radianach
 
         private void RaiseNewPositionChangeNotification()
         {
             NewPositionNotification?.Invoke(this, Position);
         }
 
-        internal void Move()
+        internal IVector GetPosition() => Position;
+        internal void SetPosition(Vector newPosition)
         {
-            // obliczenie prędkości dla osi X i Y
-            double vx = Math.Cos(Angle) * Speed;
-            double vy = Math.Sin(Angle) * Speed;
-            // nowe pozycje kulki
-            double newX = Position.x + vx;
-            double newY = Position.y + vy;
-
-            double radius = 10;
-
-            // Odbicia
-            if (newX < radius || newX > 400 - radius)
-            {
-                Angle = Math.PI - Angle; // odbicie w poziomie
-            }
-            if (newY < radius || newY > 420 - radius)
-            {
-                Angle = -Angle; // odbicie w pionie
-            }
-
-            Position = new Vector(Position.x + Math.Cos(Angle) * Speed, Position.y + Math.Sin(Angle) * Speed);
+            Position = newPosition;
             RaiseNewPositionChangeNotification();
         }
+
+        internal void Move()
+        {
+            Position = new Vector(Position.x + Velocity.x, Position.y + Velocity.y);
+            RaiseNewPositionChangeNotification();
+        }
+
         #endregion private
     }
 }
