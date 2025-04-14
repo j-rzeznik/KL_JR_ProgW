@@ -19,7 +19,7 @@ namespace TP.ConcurrentProgramming.Data
 
         public DataImplementation()
         {
-            MoveTimer = new Timer(Move, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(100));
+            MoveTimer = new Timer(Move, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(1000/60));
         }
 
         #endregion ctor
@@ -38,7 +38,7 @@ namespace TP.ConcurrentProgramming.Data
                 Vector startingPosition = new(random.Next(100, 400 - 100), random.Next(100, 400 - 100));
 
                 double angle = random.NextDouble() * 2 * Math.PI;
-                double speed = 5.0;
+                double speed = 3.0;
                 Vector velocity = new(Math.Cos(angle) * speed, Math.Sin(angle) * speed);
 
                 Ball newBall = new(startingPosition, velocity);
@@ -81,7 +81,7 @@ namespace TP.ConcurrentProgramming.Data
         private bool Disposed = false;
         private const double Radius = 10;
         private const double TableWidth = 400;
-        private const double TableHeight = 400;
+        private const double TableHeight = 420;
         private readonly Timer MoveTimer;
         private List<Ball> BallsList = [];
 
