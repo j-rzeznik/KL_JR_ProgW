@@ -85,14 +85,79 @@ namespace TP.ConcurrentProgramming.Data
         private readonly Timer MoveTimer;
         private List<Ball> BallsList = [];
 
+        //private void Move(object? x)
+        //{
+        //    foreach (Ball ball in BallsList)
+        //    {
+        //        IVector position = ball.GetPosition();
+        //        double nextX = position.x + ball.Velocity.x;
+        //        double nextY = position.y + ball.Velocity.y;
+
+
+        //        // Odbicie od lewej/prawej krawędzi
+        //        if (nextX - Radius <= 0 || nextX + Radius >= TableWidth)
+        //        {
+        //            ball.Velocity = new Vector(-ball.Velocity.x, ball.Velocity.y);
+        //        }
+
+        //        // Odbicie od góry/dołu
+        //        if (nextY - Radius <= 0 || nextY + Radius >= TableHeight)
+        //        {
+        //            ball.Velocity = new Vector(ball.Velocity.x, -ball.Velocity.y);
+        //        }
+
+        //        ball.Move();
+        //    }
+        //}
+
         private void Move(object? x)
         {
-            foreach (Ball ball in BallsList)
+            Ball[] ballsSnapshot;
+
+            lock (BallsList)
+            {
+                ballsSnapshot = BallsList.ToArray();
+            }
+
+            // Obsługa kolizji między piłkami
+            for (int i = 0; i < ballsSnapshot.Length; i++)
+            {
+                for (int j = i + 1; j < ballsSnapshot.Length; j++)
+                {
+                    Ball ball1 = ballsSnapshot[i];
+                    Ball ball2 = ballsSnapshot[j];
+
+                    IVector pos1 = ball1.GetPosition();
+                    IVector pos2 = ball2.GetPosition();
+
+                    double dx = pos2.x - pos1.x;
+                    double dy = pos2.y - pos1.y;
+                    double distance = Math.Sqrt(dx * dx + dy * dy);
+                    double minDistance = 2 * Radius;
+
+                    if (distance < minDistance && distance > 0)
+                    {
+                        // Odbicie (prosty model – zmiana kierunków)
+                        ball1.Velocity = new Vector(-ball1.Velocity.x, -ball1.Velocity.y);
+                        ball2.Velocity = new Vector(-ball2.Velocity.x, -ball2.Velocity.y);
+
+                        // Odsunięcie piłek, żeby się nie stykały
+                        double overlap = 0.5 * (minDistance - distance);
+                        double nx = dx / distance;
+                        double ny = dy / distance;
+
+                        ball1.SetPosition(new Vector(pos1.x - nx * overlap, pos1.y - ny * overlap));
+                        ball2.SetPosition(new Vector(pos2.x + nx * overlap, pos2.y + ny * overlap));
+                    }
+                }
+            }
+
+            // Ruch i odbicia od ścian
+            foreach (Ball ball in ballsSnapshot)
             {
                 IVector position = ball.GetPosition();
                 double nextX = position.x + ball.Velocity.x;
                 double nextY = position.y + ball.Velocity.y;
-
 
                 // Odbicie od lewej/prawej krawędzi
                 if (nextX - Radius <= 0 || nextX + Radius >= TableWidth)
@@ -109,6 +174,7 @@ namespace TP.ConcurrentProgramming.Data
                 ball.Move();
             }
         }
+
 
         #endregion private
 
