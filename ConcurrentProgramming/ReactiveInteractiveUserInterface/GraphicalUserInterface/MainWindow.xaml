@@ -9,14 +9,18 @@
     <Window.DataContext>
         <vm:MainWindowViewModel />
     </Window.DataContext>
-    <StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="10">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
             <TextBlock Text="Liczba kulek:" VerticalAlignment="Center" Margin="0,0,10,0"/>
             <TextBox Width="50" Text="{Binding BallCount, UpdateSourceTrigger=PropertyChanged}" />
             <Button x:Name ="StartButton" Content="Start" Command="{Binding StartCommand}"  Click ="Button_Click" Margin="20,0,0,0" Width="67"/>
         </StackPanel>
 
-        <Border BorderThickness="4" BorderBrush="MediumBlue" Height="420" Width="400">
+        <Border Grid.Row="1" BorderThickness="4" BorderBrush="MediumBlue" Margin="10,10,10,10">
             <ItemsControl ItemsSource="{Binding Balls}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -36,5 +40,5 @@
                 </ItemsControl.ItemContainerStyle>
             </ItemsControl>
         </Border>
-    </StackPanel>
+    </Grid>
 </Window>
