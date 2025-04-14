@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj": {}
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj": {
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj",
         "projectName": "BusinessLogicTest",
-        "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj",
-        "packagesPath": "C:\\Users\\klucz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\BusinessLogicTest.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogicTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klucz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj"
+              "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj"
               }
             }
           }
@@ -98,20 +98,20 @@
         }
       }
     },
-    "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "TP.ConcurrentProgramming.BusinessLogic",
-        "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\klucz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klucz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -127,8 +127,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj"
+              "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj"
               }
             }
           }
@@ -174,20 +174,20 @@
         }
       }
     },
-    "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj": {
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\klucz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klucz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

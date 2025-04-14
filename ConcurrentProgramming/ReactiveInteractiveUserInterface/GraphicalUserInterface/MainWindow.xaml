@@ -13,7 +13,7 @@
         <StackPanel Orientation="Horizontal" Margin="10">
             <TextBlock Text="Liczba kulek:" VerticalAlignment="Center" Margin="0,0,10,0"/>
             <TextBox Width="50" Text="{Binding BallCount, UpdateSourceTrigger=PropertyChanged}" />
-            <Button Content="Start" Command="{Binding StartCommand}" Margin="20,0,0,0" Width="67"/>
+            <Button x:Name ="StartButton" Content="Start" Command="{Binding StartCommand}"  Click ="Button_Click" Margin="20,0,0,0" Width="67"/>
         </StackPanel>
 
         <Border BorderThickness="4" BorderBrush="MediumBlue" Height="420" Width="400">
