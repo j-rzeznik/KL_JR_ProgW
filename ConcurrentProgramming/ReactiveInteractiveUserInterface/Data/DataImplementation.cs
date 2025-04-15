@@ -38,7 +38,7 @@ namespace TP.ConcurrentProgramming.Data
                 Vector startingPosition = new(random.Next(100, 400 - 100), random.Next(100, 400 - 100));
 
                 double angle = random.NextDouble() * 2 * Math.PI;
-                double speed = 3.0;
+                double speed = 2.0;
                 Vector velocity = new(Math.Cos(angle) * speed, Math.Sin(angle) * speed);
 
                 Ball newBall = new(startingPosition, velocity);

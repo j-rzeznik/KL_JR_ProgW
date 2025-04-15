@@ -95,5 +95,12 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
     private int ballCount;
 
         #endregion private
+
+    public void Start(int numberOfBalls)
+    {
+        BallCount = numberOfBalls;
+        Start();
     }
+  }
+
 }
