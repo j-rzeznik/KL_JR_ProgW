@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {}
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {
+    "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
         "projectName": "TP.ConcurrentProgramming.RealTimeProgramming",
-        "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
-        "packagesPath": "C:\\Users\\klucz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\RealTimeProgramming\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\RealTimeProgramming.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\RealTimeProgramming\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klucz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
