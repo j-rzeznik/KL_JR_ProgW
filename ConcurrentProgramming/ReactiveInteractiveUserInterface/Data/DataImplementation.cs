@@ -85,31 +85,6 @@ namespace TP.ConcurrentProgramming.Data
         private readonly Timer MoveTimer;
         private List<Ball> BallsList = [];
 
-        //private void Move(object? x)
-        //{
-        //    foreach (Ball ball in BallsList)
-        //    {
-        //        IVector position = ball.GetPosition();
-        //        double nextX = position.x + ball.Velocity.x;
-        //        double nextY = position.y + ball.Velocity.y;
-
-
-        //        // Odbicie od lewej/prawej krawędzi
-        //        if (nextX - Radius <= 0 || nextX + Radius >= TableWidth)
-        //        {
-        //            ball.Velocity = new Vector(-ball.Velocity.x, ball.Velocity.y);
-        //        }
-
-        //        // Odbicie od góry/dołu
-        //        if (nextY - Radius <= 0 || nextY + Radius >= TableHeight)
-        //        {
-        //            ball.Velocity = new Vector(ball.Velocity.x, -ball.Velocity.y);
-        //        }
-
-        //        ball.Move();
-        //    }
-        //}
-
         private void Move(object? x)
         {
             Ball[] ballsSnapshot;
@@ -137,12 +112,10 @@ namespace TP.ConcurrentProgramming.Data
 
                     if (distance < minDistance && distance > 0)
                     {
-                        // Odbicie (prosty model – zmiana kierunków)
-                        ball1.Velocity = new Vector(-ball1.Velocity.x, -ball1.Velocity.y);
+                        ball1.Velocity = new Vector(-ball1.Velocity.x, -ball1.Velocity.y);      //odbicie
                         ball2.Velocity = new Vector(-ball2.Velocity.x, -ball2.Velocity.y);
 
-                        // Odsunięcie piłek, żeby się nie stykały
-                        double overlap = 0.5 * (minDistance - distance);
+                        double overlap = 0.5 * (minDistance - distance);                        // Odsunięcie piłek, żeby się nie stykały
                         double nx = dx / distance;
                         double ny = dy / distance;
 
@@ -159,14 +132,12 @@ namespace TP.ConcurrentProgramming.Data
                 double nextX = position.x + ball.Velocity.x;
                 double nextY = position.y + ball.Velocity.y;
 
-                // Odbicie od lewej/prawej krawędzi
-                if (nextX - Radius <= 0 || nextX + Radius >= TableWidth)
+                if (nextX - Radius <= 0 || nextX + Radius >= TableWidth)                // Odbicie od lewej/prawej krawędzi
                 {
                     ball.Velocity = new Vector(-ball.Velocity.x, ball.Velocity.y);
                 }
 
-                // Odbicie od góry/dołu
-                if (nextY - Radius <= 0 || nextY + Radius >= TableHeight)
+                if (nextY - Radius <= 0 || nextY + Radius >= TableHeight)                // Odbicie od góry/dołu
                 {
                     ball.Velocity = new Vector(ball.Velocity.x, -ball.Velocity.y);
                 }

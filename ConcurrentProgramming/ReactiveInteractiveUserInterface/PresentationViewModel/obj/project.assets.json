@@ -157,23 +157,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\globa\\.nuget\\packages\\": {},
+    "C:\\Users\\klucz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "4.2.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationViewModel\\PresentationViewModel.csproj",
+      "projectUniqueName": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationViewModel\\PresentationViewModel.csproj",
       "projectName": "TP.ConcurrentProgramming.PresentationViewModel",
-      "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationViewModel\\PresentationViewModel.csproj",
-      "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationViewModel\\obj\\",
+      "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationViewModel\\PresentationViewModel.csproj",
+      "packagesPath": "C:\\Users\\klucz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationViewModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\klucz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -189,8 +189,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj": {
-              "projectPath": "C:\\Users\\globa\\Source\\Repos\\KL_JR_ProgW1\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj"
+            "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj": {
+              "projectPath": "C:\\Users\\klucz\\source\\repos\\KL_JR_ProgW\\ConcurrentProgramming\\ReactiveInteractiveUserInterface\\PresentationModel\\PresentationModel.csproj"
             }
           }
         }

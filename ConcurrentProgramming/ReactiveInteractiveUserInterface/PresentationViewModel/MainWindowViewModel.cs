@@ -40,7 +40,7 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
         set => Set(ref ballCount, value);
     }
 
-    public ICommand StartCommand { get; }
+        public ICommand StartCommand { get; }
 
     public ObservableCollection<ModelIBall> Balls { get; } = new ObservableCollection<ModelIBall>();
 
@@ -92,7 +92,7 @@ namespace TP.ConcurrentProgramming.Presentation.ViewModel
     private IDisposable Observer = null;
     private ModelAbstractApi ModelLayer;
     private bool Disposed = false;
-    private int ballCount;
+    private int ballCount = 5;
 
         #endregion private
 
