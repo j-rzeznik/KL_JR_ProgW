@@ -57,6 +57,10 @@ namespace TP.ConcurrentProgramming.Data
             {
                 if (disposing)
                 {
+                    foreach (Ball ball in BallsList)
+                    {
+                        ball.StopThread();
+                    }
                     MoveTimer.Dispose();
                     BallsList.Clear();
                 }

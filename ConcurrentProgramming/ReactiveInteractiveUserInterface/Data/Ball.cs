@@ -8,6 +8,8 @@
 //
 //_____________________________________________________________________________________________________________________________________
 
+using System.Threading;
+
 namespace TP.ConcurrentProgramming.Data
 {
     internal class Ball : IBall
@@ -18,6 +20,9 @@ namespace TP.ConcurrentProgramming.Data
         {
             Position = initialPosition;
             Velocity = initialVelocity;
+
+            thread = new Thread(ThreadLife);
+            thread.Start();
         }
 
         #endregion ctor
@@ -33,6 +38,8 @@ namespace TP.ConcurrentProgramming.Data
         #region private
 
         private Vector Position;
+        private Thread thread;
+        private volatile bool running = true;
 
         private void RaiseNewPositionChangeNotification()
         {
@@ -50,6 +57,20 @@ namespace TP.ConcurrentProgramming.Data
         {
             Position = new Vector(Position.x + Velocity.x, Position.y + Velocity.y);
             RaiseNewPositionChangeNotification();
+        }
+
+        private void ThreadLife()
+        {
+            while (running)
+            {
+                Thread.Sleep(Timeout.Infinite);
+            }
+        }
+
+        public void StopThread()
+        {
+            running = false;
+            thread.Join();
         }
 
         #endregion private
