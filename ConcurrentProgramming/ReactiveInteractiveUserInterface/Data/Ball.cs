@@ -49,11 +49,12 @@ namespace TP.ConcurrentProgramming.Data
             RaiseNewPositionChangeNotification();
         }
 
-        internal void Move()
+        internal void Move(Vector delta)
         {
-            Position = new Vector(Position.x + Velocity.x, Position.y + Velocity.y);
+            Position = new Vector(Position.x + delta.x, Position.y + delta.y);
             RaiseNewPositionChangeNotification();
         }
+
 
         private void ThreadLife(object tmpMoveAction)
         {

@@ -19,7 +19,7 @@ namespace TP.ConcurrentProgramming.Data
 
         public DataImplementation()
         {
-            MoveTimer = new Timer(Move, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(1000/60));
+
         }
 
         #endregion ctor
@@ -50,6 +50,15 @@ namespace TP.ConcurrentProgramming.Data
                 }
             }
         }
+        public override IVector CreateVector(double x, double y)
+        {
+            return new Vector(x, y);
+        }
+        public override void ChangePos(IBall ib, IVector v)
+        {
+            Ball b = (Ball)ib;
+            b.SetPosition((Vector)v);
+        }
 
         #endregion DataAbstractAPI
 
@@ -67,7 +76,6 @@ namespace TP.ConcurrentProgramming.Data
                         {
                             ball.StopThread();
                         }
-                        MoveTimer.Dispose();
                         BallsList.Clear();
                     }
                 }
@@ -90,73 +98,14 @@ namespace TP.ConcurrentProgramming.Data
 
         //private bool disposedValue;
         private bool Disposed = false;
-        private const double Radius = 10;
-        private const double TableWidth = 400;
-        private const double TableHeight = 420;
-        private readonly Timer MoveTimer;
         private List<Ball> BallsList = [];
-
-        private void Move(object? x)
+        private void Move(Ball ball)
         {
-            Ball[] ballsSnapshot;
-
             lock (BallsList)
             {
-                ballsSnapshot = BallsList.ToArray();
-            }
-
-            // Obsługa kolizji między piłkami
-            for (int i = 0; i < ballsSnapshot.Length; i++)
-            {
-                for (int j = i + 1; j < ballsSnapshot.Length; j++)
-                {
-                    Ball ball1 = ballsSnapshot[i];
-                    Ball ball2 = ballsSnapshot[j];
-
-                    IVector pos1 = ball1.GetPosition();
-                    IVector pos2 = ball2.GetPosition();
-
-                    double dx = pos2.x - pos1.x;
-                    double dy = pos2.y - pos1.y;
-                    double distance = Math.Sqrt(dx * dx + dy * dy);
-                    double minDistance = 2 * Radius;
-
-                    if (distance < minDistance && distance > 0)
-                    {
-                        ball1.Velocity = new Vector(-ball1.Velocity.x, -ball1.Velocity.y);      //odbicie
-                        ball2.Velocity = new Vector(-ball2.Velocity.x, -ball2.Velocity.y);
-
-                        double overlap = 0.5 * (minDistance - distance);                        // Odsunięcie piłek, żeby się nie stykały
-                        double nx = dx / distance;
-                        double ny = dy / distance;
-
-                        ball1.SetPosition(new Vector(pos1.x - nx * overlap, pos1.y - ny * overlap));
-                        ball2.SetPosition(new Vector(pos2.x + nx * overlap, pos2.y + ny * overlap));
-                    }
-                }
-            }
-
-            // Ruch i odbicia od ścian
-            foreach (Ball ball in ballsSnapshot)
-            {
-                IVector position = ball.GetPosition();
-                double nextX = position.x + ball.Velocity.x;
-                double nextY = position.y + ball.Velocity.y;
-
-                if (nextX - Radius <= 0 || nextX + Radius >= TableWidth)                // Odbicie od lewej/prawej krawędzi
-                {
-                    ball.Velocity = new Vector(-ball.Velocity.x, ball.Velocity.y);
-                }
-
-                if (nextY - Radius <= 0 || nextY + Radius >= TableHeight)                // Odbicie od góry/dołu
-                {
-                    ball.Velocity = new Vector(ball.Velocity.x, -ball.Velocity.y);
-                }
-
-                ball.Move();
+                ball.Move(new Vector(ball.Velocity.x, ball.Velocity.y));
             }
         }
-
 
         #endregion private
 

@@ -9,6 +9,7 @@
 //_____________________________________________________________________________________________________________________________________
 
 using System.Diagnostics;
+using System.Numerics;
 using UnderneathLayerAPI = TP.ConcurrentProgramming.Data.DataAbstractAPI;
 
 namespace TP.ConcurrentProgramming.BusinessLogic
@@ -51,8 +52,48 @@ namespace TP.ConcurrentProgramming.BusinessLogic
         #region private
 
         private bool Disposed = false;
-
+        private readonly List<Ball> LogicBalls = new();
         private readonly UnderneathLayerAPI layerBellow;
+
+        private void DetectCollisions(Ball sourceBall)
+        {
+            double radius = 10;
+            double width = 400;
+            double height = 420;
+
+            var pos1 = sourceBall.Position;
+
+            foreach (var ball in LogicBalls)
+            {
+                if (ball == sourceBall) continue;
+
+                var pos2 = ball.Position;
+
+                double dx = pos2.X - pos1.X;
+                double dy = pos2.Y - pos1.Y;
+                double distance = Math.Sqrt(dx * dx + dy * dy);
+                double minDist = 2 * radius;
+
+                if (distance < minDist && distance > 0)
+                {
+                    sourceBall.Velocity = new Vector(-sourceBall.Velocity.x, -sourceBall.Velocity.y);
+                    ball.Velocity = new Vector(-ball.Velocity.x, -ball.Velocity.y);
+                }
+            }
+
+            // Odbicia od ścian
+            var vel = sourceBall.Velocity;
+            var pos = sourceBall.Position;
+
+            if (pos.X - radius <= 0 || pos.X + radius >= width)
+                vel = new Vector(-vel.x, vel.y);
+
+            if (pos.Y - radius <= 0 || pos.Y + radius >= height)
+                vel = new Vector(vel.x, -vel.y);
+
+            sourceBall.Velocity = vel;
+        }
+
 
         #endregion private
 
