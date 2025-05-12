@@ -55,27 +55,17 @@ namespace TP.ConcurrentProgramming.Data
             RaiseNewPositionChangeNotification();
         }
 
-        public void StartThread(Action<Ball> moveAction)
+        private void ThreadLife(object tmpMoveAction)
         {
-            if (thread != null)
-            {
-                throw new InvalidOperationException("Thread already started");
-            }
-            thread = new Thread(ThreadLife);
-            thread.Start(moveAction);
-        }
-
-        private void ThreadLife(object moveAction)
-        {
-            if (moveAction is not Action<Ball> tmpMoveAction)
+            if (tmpMoveAction is not Action<Ball> moveAction)           // rzutujemy z powrotem na Action<Ball>
                 throw new ArgumentException("Invalid thread argument.");
 
             try
             {
                 while (true)
-                {
+                {                           // co 8ms wykonuje się przekazana metoda (u nas jest to Move())
                     Thread.Sleep(8);
-                    tmpMoveAction(this);
+                    moveAction(this);
                 }
             }
             catch (ThreadInterruptedException)
@@ -84,17 +74,32 @@ namespace TP.ConcurrentProgramming.Data
             }
         }
 
+
+        #endregion private
+
+        #region public
+
         public void StopThread()
         {
-            if (thread == null)
+            if (thread == null)         // sprawdzamy czy StartThread na pewno było poprawnie wywołane
             {
-                throw new InvalidOperationException("Thread not running");
+                throw new InvalidOperationException("The thread is not running");
             }
-            thread.Interrupt();
-            thread.Join();
+            thread.Interrupt();         // przerwanie wątku - przerwanie sleep i wejście do catch
+            thread.Join();              // metoda synchronizacji, która blokuje wątek wywołujący StopThread do momentu zakończenia thread
             thread = null;
         }
 
-        #endregion private
+        public void StartThread(Action<Ball> moveAction)
+        {
+            if (thread != null)
+            {
+                throw new ThreadStateException("The thread has already been started.");
+            }
+            thread = new Thread(ThreadLife);        // argumentem jest funkcja startowa
+            thread.Start(moveAction);               // wywołanie funkcji startowej, ta funkcja klasy Thread w .NET przyjmuje argument jako object
+        }
+
+        #endregion public
     }
 }
