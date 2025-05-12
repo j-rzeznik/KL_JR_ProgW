@@ -36,7 +36,6 @@ namespace TP.ConcurrentProgramming.Data
 
         private Vector Position;
         private Thread thread;
-        private volatile bool running = false;
 
         private void RaiseNewPositionChangeNotification()
         {
@@ -60,18 +59,28 @@ namespace TP.ConcurrentProgramming.Data
         {
             if (thread != null)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Thread already started");
             }
-            running = true;
             thread = new Thread(ThreadLife);
-            thread.Start();
+            thread.Start(moveAction);
         }
 
-        private void ThreadLife()
+        private void ThreadLife(object moveAction)
         {
-            while (running)
+            if (moveAction is not Action<Ball> tmpMoveAction)
+                throw new ArgumentException("Invalid thread argument.");
+
+            try
             {
-                Thread.Sleep(Timeout.Infinite);
+                while (true)
+                {
+                    Thread.Sleep(8);
+                    tmpMoveAction(this);
+                }
+            }
+            catch (ThreadInterruptedException)
+            {
+
             }
         }
 
@@ -79,9 +88,9 @@ namespace TP.ConcurrentProgramming.Data
         {
             if (thread == null)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Thread not running");
             }
-            running = false;
+            thread.Interrupt();
             thread.Join();
             thread = null;
         }
