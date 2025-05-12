@@ -33,17 +33,21 @@ namespace TP.ConcurrentProgramming.Data
             if (upperLayerHandler == null)
                 throw new ArgumentNullException(nameof(upperLayerHandler));
             Random random = new Random();
-            for (int i = 0; i < numberOfBalls; i++)
+            lock (BallsList)
             {
-                Vector startingPosition = new(random.Next(100, 400 - 100), random.Next(100, 400 - 100));
+                for (int i = 0; i < numberOfBalls; i++)
+                {
+                    Vector startingPosition = new(random.Next(100, 400 - 100), random.Next(100, 400 - 100));
 
-                double angle = random.NextDouble() * 2 * Math.PI;
-                double speed = 2.0;
-                Vector velocity = new(Math.Cos(angle) * speed, Math.Sin(angle) * speed);
+                    double angle = random.NextDouble() * 2 * Math.PI;
+                    double speed = 2.0;
+                    Vector velocity = new(Math.Cos(angle) * speed, Math.Sin(angle) * speed);
 
-                Ball newBall = new(startingPosition, velocity);
-                upperLayerHandler(startingPosition, newBall);
-                BallsList.Add(newBall);
+                    Ball newBall = new(startingPosition, velocity);
+                    upperLayerHandler(startingPosition, newBall);
+                    BallsList.Add(newBall);
+                    newBall.StartThread(this.Move);
+                }
             }
         }
 
@@ -57,12 +61,15 @@ namespace TP.ConcurrentProgramming.Data
             {
                 if (disposing)
                 {
-                    foreach (Ball ball in BallsList)
+                    lock (BallsList)
                     {
-                        ball.StopThread();
+                        foreach (Ball ball in BallsList)
+                        {
+                            ball.StopThread();
+                        }
+                        MoveTimer.Dispose();
+                        BallsList.Clear();
                     }
-                    MoveTimer.Dispose();
-                    BallsList.Clear();
                 }
                 Disposed = true;
             }

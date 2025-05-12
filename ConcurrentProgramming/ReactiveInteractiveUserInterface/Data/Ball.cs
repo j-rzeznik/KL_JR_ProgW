@@ -20,9 +20,6 @@ namespace TP.ConcurrentProgramming.Data
         {
             Position = initialPosition;
             Velocity = initialVelocity;
-
-            thread = new Thread(ThreadLife);
-            thread.Start();
         }
 
         #endregion ctor
@@ -39,7 +36,7 @@ namespace TP.ConcurrentProgramming.Data
 
         private Vector Position;
         private Thread thread;
-        private volatile bool running = true;
+        private volatile bool running = false;
 
         private void RaiseNewPositionChangeNotification()
         {
@@ -59,6 +56,17 @@ namespace TP.ConcurrentProgramming.Data
             RaiseNewPositionChangeNotification();
         }
 
+        public void StartThread(Action<Ball> moveAction)
+        {
+            if (thread != null)
+            {
+                throw new InvalidOperationException();
+            }
+            running = true;
+            thread = new Thread(ThreadLife);
+            thread.Start();
+        }
+
         private void ThreadLife()
         {
             while (running)
@@ -69,8 +77,13 @@ namespace TP.ConcurrentProgramming.Data
 
         public void StopThread()
         {
+            if (thread == null)
+            {
+                throw new InvalidOperationException();
+            }
             running = false;
             thread.Join();
+            thread = null;
         }
 
         #endregion private
