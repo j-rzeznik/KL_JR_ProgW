@@ -10,6 +10,7 @@
 
 using System.Diagnostics;
 using System.Numerics;
+using TP.ConcurrentProgramming.Data;
 using UnderneathLayerAPI = TP.ConcurrentProgramming.Data.DataAbstractAPI;
 
 namespace TP.ConcurrentProgramming.BusinessLogic
@@ -83,15 +84,15 @@ namespace TP.ConcurrentProgramming.BusinessLogic
 
                 if (e.x - radiusBall <= 0 || e.x + radiusBall >= widthTable)
                 {
-                    sourceBall.Velocity = layerBellow.makeVector(-vel.x, vel.y);
-                    layerBellow.modifyPosition(sourceBall, lastPos);
+                    sourceBall.Velocity = layerBellow.MakeVector(-vel.x, vel.y);
+                    layerBellow.ModifyPosition(sourceBall, lastPos);
                     return;
                 }
 
                 if (e.y - radiusBall <= 0 || e.y + radiusBall >= heightTable)
                 {
-                    sourceBall.Velocity = layerBellow.makeVector(vel.x, -vel.y);
-                    layerBellow.modifyPosition(sourceBall, lastPos);
+                    sourceBall.Velocity = layerBellow.MakeVector(vel.x, -vel.y);
+                    layerBellow.ModifyPosition(sourceBall, lastPos);
                     return;
                 }
 
@@ -111,8 +112,24 @@ namespace TP.ConcurrentProgramming.BusinessLogic
 
                     if (distance < minDistance && distance > 0)
                     {
-                        sourceBall.Velocity = layerBellow.makeVector(-vel.x, -vel.y);
-                        ball.Velocity = layerBellow.makeVector(-ball.Velocity.x, -ball.Velocity.y);
+                        double mass1 = sourceBall.Mass;
+                        double mass2 = ball.Mass;
+                        //double nextVx1 = (vel.x * (mass1 - mass2) + 2 * mass2 * );
+
+                        sourceBall.Velocity = layerBellow.MakeVector(-vel.x, -vel.y);                   //odbicie
+                        ball.Velocity = layerBellow.MakeVector(-ball.Velocity.x, -ball.Velocity.y);
+
+
+                        double overlap = 0.5 * (minDistance - distance);                        // Odsunięcie piłek, żeby się nie stykały
+                        double nx = dx / distance;
+                        double ny = dy / distance;
+
+
+                        var posSourceBall = layerBellow.MakeVector(pos1.x - nx * overlap, pos1.y - ny * overlap);
+                        var posBall = layerBellow.MakeVector(pos2.x + nx * overlap, pos2.y + ny * overlap);
+
+                        layerBellow.ModifyPosition(sourceBall, posSourceBall);
+                        layerBellow.ModifyPosition(ball, posBall);
                     }
                 }
 

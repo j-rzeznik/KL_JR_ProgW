@@ -50,11 +50,11 @@ namespace TP.ConcurrentProgramming.Data
                 }
             }
         }
-        public override IVector makeVector(double x, double y)
+        public override IVector MakeVector(double x, double y)
         {
             return new Vector(x, y);
         }
-        public override void modifyPosition(IBall ib, IVector v)
+        public override void ModifyPosition(IBall ib, IVector v)
         {
             Ball b = (Ball)ib;
             b.SetPosition((Vector)v);

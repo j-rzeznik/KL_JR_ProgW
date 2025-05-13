@@ -20,6 +20,7 @@ namespace TP.ConcurrentProgramming.Data
         {
             Position = initialPosition;
             Velocity = initialVelocity;
+            mass = 1.0;
         }
 
         #endregion ctor
@@ -36,6 +37,7 @@ namespace TP.ConcurrentProgramming.Data
 
         private Vector Position;
         private Thread thread;
+        private double mass;
 
         private void RaiseNewPositionChangeNotification()
         {
@@ -78,6 +80,8 @@ namespace TP.ConcurrentProgramming.Data
         #endregion private
 
         #region public
+
+        public double Mass => mass;     // pole tylko do odczytu
 
         public void StopThread()
         {
