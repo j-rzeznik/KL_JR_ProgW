@@ -64,8 +64,8 @@ namespace TP.ConcurrentProgramming.Data
             try
             {
                 while (true)
-                {                           // co 8ms wykonuje się przekazana metoda (u nas jest to Move())
-                    Thread.Sleep(8);
+                {                           // co 14ms wykonuje się przekazana metoda (u nas jest to Move())
+                    Thread.Sleep(14);
                     moveAction(this);
                 }
             }
@@ -74,7 +74,6 @@ namespace TP.ConcurrentProgramming.Data
 
             }
         }
-
 
         #endregion private
 

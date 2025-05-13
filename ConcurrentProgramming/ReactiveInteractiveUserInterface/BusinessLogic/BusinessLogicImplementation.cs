@@ -44,7 +44,19 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                 throw new ObjectDisposedException(nameof(BusinessLogicImplementation));
             if (upperLayerHandler == null)
                 throw new ArgumentNullException(nameof(upperLayerHandler));
-            layerBellow.Start(numberOfBalls, (startingPosition, databall) => upperLayerHandler(new Position(startingPosition.x, startingPosition.x), new Ball(databall)));
+            layerBellow.Start(numberOfBalls, (startingPosition, dataBall) =>
+            {
+                lock (dataBalls)
+                {
+                    dataBalls.Add(dataBall);
+                    lastPositions[dataBall] = startingPosition;
+                    dataBall.NewPositionNotification += DetectCollisions;
+                }
+                var businessBall = new Ball(dataBall);
+                upperLayerHandler(
+                    new Position(startingPosition.x, startingPosition.y),
+                    businessBall);
+            });
         }
 
         #endregion BusinessLogicAbstractAPI
@@ -54,44 +66,62 @@ namespace TP.ConcurrentProgramming.BusinessLogic
         private bool Disposed = false;
         private readonly List<Ball> LogicBalls = new();
         private readonly UnderneathLayerAPI layerBellow;
+        private readonly List<Data.IBall> dataBalls = [];
+        private readonly Dictionary<Data.IBall, Data.IVector> lastPositions = new();
 
-        private void DetectCollisions(Ball sourceBall)
+        private void DetectCollisions(object? sender, Data.IVector e)
         {
             double radius = 10;
             double width = 400;
             double height = 420;
+            var sourceBall = (Data.IBall)sender!;
+            var lastPos = lastPositions[sourceBall];
 
-            var pos1 = sourceBall.Position;
-
-            foreach (var ball in LogicBalls)
+            lock (dataBalls)
             {
-                if (ball == sourceBall) continue;
+                lastPositions[sourceBall] = e;
 
-                var pos2 = ball.Position;
+                // Odbicia od ścian
+                var vel = sourceBall.Velocity;
 
-                double dx = pos2.X - pos1.X;
-                double dy = pos2.Y - pos1.Y;
-                double distance = Math.Sqrt(dx * dx + dy * dy);
-                double minDist = 2 * radius;
-
-                if (distance < minDist && distance > 0)
+                if (e.x - radius <= 0 || e.x + radius >= width)
                 {
-                    sourceBall.Velocity = new Vector(-sourceBall.Velocity.x, -sourceBall.Velocity.y);
-                    ball.Velocity = new Vector(-ball.Velocity.x, -ball.Velocity.y);
+                    sourceBall.Velocity = layerBellow.CreateVector(-vel.x, vel.y);
+                    layerBellow.ChangePos(sourceBall, lastPos);
+                    return;
                 }
+
+                if (e.y - radius <= 0 || e.y + radius >= height)
+                {
+                    sourceBall.Velocity = layerBellow.CreateVector(vel.x, -vel.y);
+                    layerBellow.ChangePos(sourceBall, lastPos);
+                    return;
+                }
+
+
+                // kolizje między piłkami
+                var pos1 = lastPositions[sourceBall];
+
+                foreach (var ball in dataBalls)
+                {
+                    if (ball == sourceBall) continue;
+
+                    var pos2 = lastPositions[ball];
+
+                    double dx = pos2.x - pos1.x;
+                    double dy = pos2.y - pos1.y;
+                    double distance = Math.Sqrt(dx * dx + dy * dy);
+                    double minDist = 2 * radius;
+
+                    if (distance < minDist && distance > 0)
+                    {
+                        sourceBall.Velocity = layerBellow.CreateVector(-vel.x, -vel.y);
+                        ball.Velocity = layerBellow.CreateVector(-ball.Velocity.x, -ball.Velocity.y);
+                    }
+                }
+
+                return;
             }
-
-            // Odbicia od ścian
-            var vel = sourceBall.Velocity;
-            var pos = sourceBall.Position;
-
-            if (pos.X - radius <= 0 || pos.X + radius >= width)
-                vel = new Vector(-vel.x, vel.y);
-
-            if (pos.Y - radius <= 0 || pos.Y + radius >= height)
-                vel = new Vector(vel.x, -vel.y);
-
-            sourceBall.Velocity = vel;
         }
 
 
