@@ -52,3 +52,14 @@ Mkfile.old
 dkms.conf
 
 .vs
+ConcurrentProgramming/.idea
+ConcurrentProgramming/CommonDataConsistency
+ConcurrentProgramming/CommonDataConsistencyUnitTest
+ConcurrentProgramming/Communication
+ConcurrentProgramming/CommunicationTest
+ConcurrentProgramming/Fundamentals
+ConcurrentProgramming/FundamentalsTest
+ConcurrentProgramming/RealTimeProgramming
+ConcurrentProgramming/Synchronization
+ConcurrentProgramming/SynchronizationTest
+ConcurrentProgramming/TestResults
