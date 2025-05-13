@@ -24,8 +24,8 @@ namespace TP.ConcurrentProgramming.Data
         #region public API
 
         public abstract void Start(int numberOfBalls, Action<IVector, IBall> upperLayerHandler);
-        public abstract IVector CreateVector(double x, double y);
-        public abstract void ChangePos(IBall ball, IVector delta);
+        public abstract IVector makeVector(double x, double y);
+        public abstract void modifyPosition(IBall ball, IVector delta);
 
         #endregion public API
 

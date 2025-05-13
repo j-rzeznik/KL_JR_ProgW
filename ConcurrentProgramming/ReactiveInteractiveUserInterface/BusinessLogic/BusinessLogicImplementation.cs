@@ -86,15 +86,15 @@ namespace TP.ConcurrentProgramming.BusinessLogic
 
                 if (e.x - radius <= 0 || e.x + radius >= width)
                 {
-                    sourceBall.Velocity = layerBellow.CreateVector(-vel.x, vel.y);
-                    layerBellow.ChangePos(sourceBall, lastPos);
+                    sourceBall.Velocity = layerBellow.makeVector(-vel.x, vel.y);
+                    layerBellow.modifyPosition(sourceBall, lastPos);
                     return;
                 }
 
                 if (e.y - radius <= 0 || e.y + radius >= height)
                 {
-                    sourceBall.Velocity = layerBellow.CreateVector(vel.x, -vel.y);
-                    layerBellow.ChangePos(sourceBall, lastPos);
+                    sourceBall.Velocity = layerBellow.makeVector(vel.x, -vel.y);
+                    layerBellow.modifyPosition(sourceBall, lastPos);
                     return;
                 }
 
@@ -115,8 +115,8 @@ namespace TP.ConcurrentProgramming.BusinessLogic
 
                     if (distance < minDist && distance > 0)
                     {
-                        sourceBall.Velocity = layerBellow.CreateVector(-vel.x, -vel.y);
-                        ball.Velocity = layerBellow.CreateVector(-ball.Velocity.x, -ball.Velocity.y);
+                        sourceBall.Velocity = layerBellow.makeVector(-vel.x, -vel.y);
+                        ball.Velocity = layerBellow.makeVector(-ball.Velocity.x, -ball.Velocity.y);
                     }
                 }
 
