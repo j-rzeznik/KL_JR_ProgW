@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP.ConcurrentProgramming.Fundamentals")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+908f71c1f67f7f2cb0b9e41b05a5724cab1ad786")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f26fb9231a7ddbf83470258a0478477840d17f06")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP.ConcurrentProgramming.Fundamentals")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP.ConcurrentProgramming.Fundamentals")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

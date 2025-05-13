@@ -44,18 +44,16 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                 throw new ObjectDisposedException(nameof(BusinessLogicImplementation));
             if (upperLayerHandler == null)
                 throw new ArgumentNullException(nameof(upperLayerHandler));
-            layerBellow.Start(numberOfBalls, (startingPosition, dataBall) =>
+            layerBellow.Start(numberOfBalls, (initialPosition, dataBall) =>
             {
                 lock (dataBalls)
                 {
                     dataBalls.Add(dataBall);
-                    lastPositions[dataBall] = startingPosition;
+                    lastPositions[dataBall] = initialPosition;
                     dataBall.NewPositionNotification += DetectCollisions;
                 }
-                var businessBall = new Ball(dataBall);
-                upperLayerHandler(
-                    new Position(startingPosition.x, startingPosition.y),
-                    businessBall);
+                var logicBall = new Ball(dataBall);
+                upperLayerHandler(new Position(initialPosition.x, initialPosition.y), logicBall);
             });
         }
 
@@ -64,16 +62,15 @@ namespace TP.ConcurrentProgramming.BusinessLogic
         #region private
 
         private bool Disposed = false;
-        private readonly List<Ball> LogicBalls = new();
         private readonly UnderneathLayerAPI layerBellow;
         private readonly List<Data.IBall> dataBalls = [];
         private readonly Dictionary<Data.IBall, Data.IVector> lastPositions = new();
 
         private void DetectCollisions(object? sender, Data.IVector e)
         {
-            double radius = 10;
-            double width = 400;
-            double height = 420;
+            const double radiusBall = 10;
+            const double widthTable = 400;
+            const double heightTable = 420;
             var sourceBall = (Data.IBall)sender!;
             var lastPos = lastPositions[sourceBall];
 
@@ -84,20 +81,19 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                 // Odbicia od ścian
                 var vel = sourceBall.Velocity;
 
-                if (e.x - radius <= 0 || e.x + radius >= width)
+                if (e.x - radiusBall <= 0 || e.x + radiusBall >= widthTable)
                 {
                     sourceBall.Velocity = layerBellow.makeVector(-vel.x, vel.y);
                     layerBellow.modifyPosition(sourceBall, lastPos);
                     return;
                 }
 
-                if (e.y - radius <= 0 || e.y + radius >= height)
+                if (e.y - radiusBall <= 0 || e.y + radiusBall >= heightTable)
                 {
                     sourceBall.Velocity = layerBellow.makeVector(vel.x, -vel.y);
                     layerBellow.modifyPosition(sourceBall, lastPos);
                     return;
                 }
-
 
                 // kolizje między piłkami
                 var pos1 = lastPositions[sourceBall];
@@ -111,9 +107,9 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                     double dx = pos2.x - pos1.x;
                     double dy = pos2.y - pos1.y;
                     double distance = Math.Sqrt(dx * dx + dy * dy);
-                    double minDist = 2 * radius;
+                    double minDistance = 2 * radiusBall;
 
-                    if (distance < minDist && distance > 0)
+                    if (distance < minDistance && distance > 0)
                     {
                         sourceBall.Velocity = layerBellow.makeVector(-vel.x, -vel.y);
                         ball.Velocity = layerBellow.makeVector(-ball.Velocity.x, -ball.Velocity.y);
