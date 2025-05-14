@@ -67,7 +67,17 @@ namespace TP.ConcurrentProgramming.BusinessLogic.Test
       public override void Dispose()
       { }
 
-      public override void Start(int numberOfBalls, Action<IVector, Data.IBall> upperLayerHandler)
+            public override IVector MakeVector(double x, double y)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void ModifyPosition(Data.IBall ball, IVector delta)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Start(int numberOfBalls, Action<IVector, Data.IBall> upperLayerHandler)
       {
         throw new NotImplementedException();
       }
@@ -82,7 +92,17 @@ namespace TP.ConcurrentProgramming.BusinessLogic.Test
         Disposed = true;
       }
 
-      public override void Start(int numberOfBalls, Action<IVector, Data.IBall> upperLayerHandler)
+            public override IVector MakeVector(double x, double y)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void ModifyPosition(Data.IBall ball, IVector delta)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Start(int numberOfBalls, Action<IVector, Data.IBall> upperLayerHandler)
       {
         throw new NotImplementedException();
       }

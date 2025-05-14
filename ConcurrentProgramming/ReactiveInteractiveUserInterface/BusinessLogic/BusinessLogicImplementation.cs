@@ -86,6 +86,7 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                 {
                     sourceBall.Velocity = layerBellow.MakeVector(-vel.x, vel.y);
                     layerBellow.ModifyPosition(sourceBall, lastPos);
+                    lastPositions[sourceBall] = lastPos;
                     return;
                 }
 
@@ -93,6 +94,7 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                 {
                     sourceBall.Velocity = layerBellow.MakeVector(vel.x, -vel.y);
                     layerBellow.ModifyPosition(sourceBall, lastPos);
+                    lastPositions[sourceBall] = lastPos;
                     return;
                 }
 
@@ -105,33 +107,51 @@ namespace TP.ConcurrentProgramming.BusinessLogic
 
                     var pos2 = lastPositions[ball];
 
-                    double dx = pos2.x - pos1.x;
-                    double dy = pos2.y - pos1.y;
-                    double distance = Math.Sqrt(dx * dx + dy * dy);
+                    // pozycje i prędkości
+                    double p1x = pos1.x;
+                    double p1y = pos1.y;
+                    double p2x = pos2.x;
+                    double p2y = pos2.y;
+
+                    double dx = p1x - p2x;
+                    double dy = p1y - p2y;
+                    double distanceSquared = dx * dx + dy * dy;
                     double minDistance = 2 * radiusBall;
 
-                    if (distance < minDistance && distance > 0)
+                    if (distanceSquared < minDistance * minDistance)
                     {
-                        double mass1 = sourceBall.Mass;
-                        double mass2 = ball.Mass;
-                        //double nextVx1 = (vel.x * (mass1 - mass2) + 2 * mass2 * );
+                        double v1x = sourceBall.Velocity.x;
+                        double v1y = sourceBall.Velocity.y;
+                        double v2x = ball.Velocity.x;
+                        double v2y = ball.Velocity.y;
 
-                        sourceBall.Velocity = layerBellow.MakeVector(-vel.x, -vel.y);                   //odbicie
-                        ball.Velocity = layerBellow.MakeVector(-ball.Velocity.x, -ball.Velocity.y);
+                        double dvx = v1x - v2x;
+                        double dvy = v1y - v2y;
 
+                        double dot = dvx * dx + dvy * dy;
+                        if (dot >= 0) return;
 
-                        double overlap = 0.5 * (minDistance - distance);                        // Odsunięcie piłek, żeby się nie stykały
-                        double nx = dx / distance;
-                        double ny = dy / distance;
+                        double m1 = sourceBall.Mass;
+                        double m2 = ball.Mass;
 
+                        double coeff1 = (2 * m2) / (m1 + m2) * (dot / distanceSquared);
+                        double coeff2 = (2 * m1) / (m1 + m2) * (dot / distanceSquared);
 
-                        var posSourceBall = layerBellow.MakeVector(pos1.x - nx * overlap, pos1.y - ny * overlap);
-                        var posBall = layerBellow.MakeVector(pos2.x + nx * overlap, pos2.y + ny * overlap);
+                        double newV1x = v1x - coeff1 * dx;
+                        double newV1y = v1y - coeff1 * dy;
+                        double newV2x = v2x + coeff2 * dx;
+                        double newV2y = v2y + coeff2 * dy;
 
-                        layerBellow.ModifyPosition(sourceBall, posSourceBall);
-                        layerBellow.ModifyPosition(ball, posBall);
+                        sourceBall.Velocity = layerBellow.MakeVector(newV1x, newV1y);
+                        ball.Velocity = layerBellow.MakeVector(newV2x, newV2y);
                     }
-                }
+
+                    //layerBellow.ModifyPosition(sourceBall, posSourceBall);
+                    //layerBellow.ModifyPosition(ball, posBall);
+                    //lastPositions[sourceBall] = posSourceBall;
+                    //lastPositions[ball] = posBall;
+                
+            }
 
                 return;
             }

@@ -104,6 +104,11 @@ namespace TP.ConcurrentProgramming.Data
             thread.Start(moveAction);               // wywołanie funkcji startowej, ta funkcja klasy Thread w .NET przyjmuje argument jako object
         }
 
+        internal void Move()
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion public
     }
 }
