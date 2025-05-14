@@ -54,10 +54,10 @@ namespace TP.ConcurrentProgramming.Data
         {
             return new Vector(x, y);
         }
-        public override void ModifyPosition(IBall ib, IVector v)
+        public override void ModifyPosition(IBall iball, IVector vec)
         {
-            Ball b = (Ball)ib;
-            b.SetPosition((Vector)v);
+            Ball ball = (Ball)iball;
+            ball.SetPosition((Vector)vec);
         }
 
         #endregion DataAbstractAPI

@@ -36,7 +36,7 @@ namespace TP.ConcurrentProgramming.Data
         #region private
 
         private Vector Position;
-        private Thread thread;
+        private Thread? thread;
         private double mass;
 
         private void RaiseNewPositionChangeNotification()

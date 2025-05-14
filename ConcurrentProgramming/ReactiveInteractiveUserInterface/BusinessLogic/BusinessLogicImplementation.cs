@@ -146,7 +146,7 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                         ball.Velocity = layerBellow.MakeVector(newV2x, newV2y);
                     }
                 
-            }
+                }
 
                 return;
             }
