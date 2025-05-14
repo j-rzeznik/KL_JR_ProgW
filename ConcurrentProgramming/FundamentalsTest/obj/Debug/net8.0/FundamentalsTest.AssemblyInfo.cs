@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP.ConcurrentProgramming.FundamentalsTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d04a5965fb33a214f0aa0dbf3e8e75c2d06863e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36cd9b1625a3f4e1a02b73aa3a9ff999a79242b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP.ConcurrentProgramming.FundamentalsTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP.ConcurrentProgramming.FundamentalsTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

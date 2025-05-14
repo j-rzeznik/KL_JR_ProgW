@@ -122,8 +122,17 @@ namespace TP.ConcurrentProgramming.BusinessLogic.Test
         NumberOfBallseCreated = numberOfBalls;
         upperLayerHandler(new DataVectorFixture(), new DataBallFixture());
       }
+            public override IVector MakeVector(double x, double y)
+            {
+                throw new NotImplementedException();
+            }
 
-      private record DataVectorFixture : Data.IVector
+            public override void ModifyPosition(Data.IBall ball, IVector delta)
+            {
+                throw new NotImplementedException();
+            }
+
+            private record DataVectorFixture : Data.IVector
       {
         public double x { get; init; }
         public double y { get; init; }
@@ -133,7 +142,9 @@ namespace TP.ConcurrentProgramming.BusinessLogic.Test
       {
         public IVector Velocity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public event EventHandler<IVector>? NewPositionNotification = null;
+                public double Mass => throw new NotImplementedException();
+
+                public event EventHandler<IVector>? NewPositionNotification = null;
       }
     }
 

@@ -145,11 +145,6 @@ namespace TP.ConcurrentProgramming.BusinessLogic
                         sourceBall.Velocity = layerBellow.MakeVector(newV1x, newV1y);
                         ball.Velocity = layerBellow.MakeVector(newV2x, newV2y);
                     }
-
-                    //layerBellow.ModifyPosition(sourceBall, posSourceBall);
-                    //layerBellow.ModifyPosition(ball, posBall);
-                    //lastPositions[sourceBall] = posSourceBall;
-                    //lastPositions[ball] = posBall;
                 
             }
 
